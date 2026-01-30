@@ -1,0 +1,13 @@
+name: test-run-20260130-073550
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        required: true
+        type: string
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "run ${{ github.event.inputs.run_id }}"
+      - run: exit 1
